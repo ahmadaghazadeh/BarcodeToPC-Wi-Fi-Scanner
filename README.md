@@ -1,0 +1,2 @@
+# BarcodeScannerServer
+Barcode Scanner Server
