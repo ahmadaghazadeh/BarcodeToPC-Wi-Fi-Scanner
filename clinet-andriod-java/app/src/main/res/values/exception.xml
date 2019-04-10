@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_message_connection">No Internet please check internet</string>
+    <string name="error_message_api_not_found">خطا هنگام ارتباط با سرور</string>
+    <string name="error_message_api_server">Server Error</string>
+    <string name="error_message_constraint">Constraint error</string>
+    <string name="error_message_sqlite">Sqlite error</string>
+    <string name="error_message_timeout">سرور در حال بروز رسانی است لطفا بعدا تلاش کنید</string>
+    <string name="error_not_recognized">خطا شناسایی نشد</string>
+    <string name="error_message_url">Url not found</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_login">نام کاربری یا کلمه عبور صحیح نمی باشد</string>
+    <string name="error_email_duplicate">این ایمیل قبلا توسط شخص دیگری استفاده شده است</string>
+    <string name="error_file_not_found">File Not Found</string>
+    <string name="error_message_io">خطایی خواندن از مقصد</string>
+    <string name="error_main_thread_">Main thread </string>
+    <string name="error_book_not_found">خطا هنگام واکشی داده</string>
+    <string name="error_title">خطا هنگام اجرایی برنامه</string>
+</resources>

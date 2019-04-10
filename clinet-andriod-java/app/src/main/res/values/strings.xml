@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Client QRCode Scanner</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="i_understand">I Understand</string>
+</resources>
