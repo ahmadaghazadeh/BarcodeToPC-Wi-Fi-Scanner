@@ -6,8 +6,7 @@ import android.content.Context;
 
 public class AppPref implements IAppPref {
 
-    private static final String IS_INIT_APP = "IS_INIT_APP";
-    private static final String USER_XP = "USER_XP";
+    private static final String SERVER_URL = "SERVER_URL";
 
 
     private PreferenceManager pm;
@@ -18,4 +17,13 @@ public class AppPref implements IAppPref {
     }
 
 
+    @Override
+    public void saveServerUrl(String url) {
+        pm.set(SERVER_URL,url);
+    }
+
+    @Override
+    public String loadServerUrl() {
+     return   pm.get(SERVER_URL,"http://192.168.0.1/");
+    }
 }

@@ -7,12 +7,12 @@ import com.github.ahmadaghazadeh.barcodescannerclient.R;
 
 public class ConnectionException extends BaseException {
 
-    //@Inject
-    public Context context;
+    private Context context;
 
-    public ConnectionException(Exception exception) {
+    public ConnectionException(Context context ,Exception exception) {
         super();
         errorModel.systemMessage = exception.getMessage();
+        this.context= context;
         generateMessage();
     }
     private void generateMessage() {

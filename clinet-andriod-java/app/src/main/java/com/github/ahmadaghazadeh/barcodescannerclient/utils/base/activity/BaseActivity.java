@@ -39,9 +39,9 @@ public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseView
 
     protected T mViewDataBinding;
     protected V mViewModel;
-   // @Inject
+    // @Inject
     CommonUtils commonUtils;
-   // @Inject
+    // @Inject
     HandleException handleException;
     private ProgressDialog progress;
 
@@ -54,10 +54,13 @@ public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseView
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         progress = new ProgressDialog(this);
         progress.setCancelable(false);
         performDataBinding();
+
+
     }
 
     public void handleError(Throwable throwable) {
@@ -68,7 +71,7 @@ public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseView
         if (frag != null) {
             manager.beginTransaction().remove(frag).commit();
         }
-       // DialogPrompt prompt = DialogPrompt.newInstance(handleException.getUserTitle(), handleException.getUserMessage());
+        // DialogPrompt prompt = DialogPrompt.newInstance(handleException.getUserTitle(), handleException.getUserMessage());
         //prompt.show(manager, ERROR_DIALOG);
     }
 

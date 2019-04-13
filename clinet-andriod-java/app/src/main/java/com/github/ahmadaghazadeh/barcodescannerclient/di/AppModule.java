@@ -5,10 +5,11 @@ import android.app.Application;
 import android.content.Context;
 
 
-import com.github.ahmadaghazadeh.barcodescannerclient.app.C;
-import com.github.ahmadaghazadeh.barcodescannerclient.data.IRepository;
-import com.github.ahmadaghazadeh.barcodescannerclient.data.Repository;
-import com.github.ahmadaghazadeh.barcodescannerclient.data.remote.RetrofitApi;
+import com.github.ahmadaghazadeh.barcodescannerclient.data.local.pref.IAppPref;
+import com.github.ahmadaghazadeh.barcodescannerclient.data.remote.Api;
+import com.github.ahmadaghazadeh.barcodescannerclient.data.remote.IApi;
+import com.github.ahmadaghazadeh.barcodescannerclient.data.remote.IRepository;
+import com.github.ahmadaghazadeh.barcodescannerclient.data.remote.Repository;
 import com.github.ahmadaghazadeh.barcodescannerclient.utils.common.CommonUtils;
 
 import javax.inject.Named;
@@ -22,11 +23,10 @@ import retrofit2.Retrofit;
 @Module
 public abstract class AppModule {
 
-    @Singleton
     @Provides
     @Named("serverUrl")
-    public static String getBaseUrl() {
-        return C.UrlApi;
+    public static String getBaseUrl(IAppPref appPref) {
+        return appPref.loadServerUrl();
     }
 
     @Singleton
@@ -40,16 +40,17 @@ public abstract class AppModule {
     abstract Context getContext(Application application);
 
 
-
     @Singleton
     @Provides
-    public static RetrofitApi provideRetrofitApi(Retrofit retrofit) {
-        return new RetrofitApi(retrofit);
+    public static IApi provideRetrofitApi(Retrofit retrofit, Context context) {
+        return new Api(retrofit,context);
     }
 
     @Provides
     @Singleton
-    public static IRepository provideRepository(RetrofitApi api,   Context context) {
-        return new Repository(api,   context);
+    public static IRepository provideRepository(IApi api, Context context) {
+        return new Repository(api);
     }
+
+
 }

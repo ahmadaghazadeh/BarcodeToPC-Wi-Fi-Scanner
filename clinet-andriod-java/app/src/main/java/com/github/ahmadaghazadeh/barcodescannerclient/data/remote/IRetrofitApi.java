@@ -3,6 +3,9 @@ package com.github.ahmadaghazadeh.barcodescannerclient.data.remote;
 
 
 
+import com.github.ahmadaghazadeh.barcodescannerclient.data.remote.PostData;
+import com.github.ahmadaghazadeh.barcodescannerclient.data.remote.ResultData;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;

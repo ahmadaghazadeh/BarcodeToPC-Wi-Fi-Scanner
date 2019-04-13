@@ -1,5 +1,6 @@
 ﻿using System.Web.Http;
 using WindowsInput;
+using WindowsInput.Native;
 
 namespace BarcodeScanner
 {
@@ -13,6 +14,7 @@ namespace BarcodeScanner
         {
             var simulator = new InputSimulator();
             simulator.Keyboard.TextEntry(value.Text);
+            simulator.Keyboard.KeyPress(VirtualKeyCode.RETURN);
             return Ok(new ResultData(){Text = "OK"});
         }
     }
