@@ -93,13 +93,15 @@ public class ReadActivity extends BaseActivity<ActivityReadBinding, ReadViewMode
         qrCodeReaderView.setAutofocusInterval(2000L);
 
         // Use this function to enable/disable Torch
-        qrCodeReaderView.setTorchEnabled(true);
+        qrCodeReaderView.setTorchEnabled(false);
 
         // Use this function to set front camera preview
         qrCodeReaderView.setFrontCamera();
 
         // Use this function to set back camera preview
         qrCodeReaderView.setBackCamera();
+
+
     }
 
 

@@ -88,7 +88,7 @@ public class ConnectActivity extends BaseActivity<ActivityConnectBinding, Connec
         qrCodeReaderView.setAutofocusInterval(2000L);
 
         // Use this function to enable/disable Torch
-        qrCodeReaderView.setTorchEnabled(true);
+        qrCodeReaderView.setTorchEnabled(false);
 
         // Use this function to set front camera preview
         qrCodeReaderView.setFrontCamera();
